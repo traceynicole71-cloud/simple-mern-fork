@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const localMongoUri = 'mongodb://127.0.0.1:27017/simple-mern';
-const mongoUri = process.env.MONGODB_URI || (process.env.NODE_ENV !== 'production' ? localMongoUri : null);
+const useLocalMongo = process.env.USE_LOCAL_MONGODB === 'true';
+const mongoUri = process.env.MONGODB_URI || (useLocalMongo ? localMongoUri : null);
 
 if (!mongoUri) {
-	console.error('Missing MONGODB_URI in production. Set this environment variable in Render.');
+	console.error('Missing MONGODB_URI. Set it in Render, or set USE_LOCAL_MONGODB=true for local development.');
 	process.exit(1);
 }
 

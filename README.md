@@ -19,6 +19,8 @@ This MERN starter, `simple-mern` aims to be the minimum you need to get started 
 3. `npm start` in both root directory and `client` directory
 4. Head to [localhost:3000](http://localhost:3000) to see the 'My Tasks' app
 
+If you want to use the local database bootstrap, set `USE_LOCAL_MONGODB=true` before starting the server.
+
 ### Production
 
 ```bash
@@ -27,7 +29,7 @@ npm run build
 npm run start:prod
 ```
 
-The production app will be running at [localhost:3000](http://localhost:3000/).
+For Render, set `MONGODB_URI` to your Atlas connection string and do not set `USE_LOCAL_MONGODB`.
 
 ## Extend `simple-mern`
 
