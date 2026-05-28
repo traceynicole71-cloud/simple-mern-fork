@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=production node index.js",
     "start:dev": "nodemon index.js",
+    "start:local": "USE_LOCAL_MONGODB=true node index.js",
+    "start:dev:local": "USE_LOCAL_MONGODB=true nodemon index.js",
     "start:prod": "NODE_ENV=production node index.js",
     "build": "cd client && npm install && npm run build"
   },
