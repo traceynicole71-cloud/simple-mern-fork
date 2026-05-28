@@ -12,11 +12,14 @@
   },
   "author": "James Vickery",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.6",
     "express": "^4.16.4",
-    "mongoose": "^8.24.0",
+    "mongoose": "^9.6.3",
     "password-generator": "^2.2.0"
   },
   "devDependencies": {
