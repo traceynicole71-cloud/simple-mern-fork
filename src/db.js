@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongoosePkg = require('mongoose/package.json');
 
-const localMongoUri = 'mongodb://127.0.0.1:27017/simple-mern';
+const localMongoURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/simple-mern';
 const useLocalMongo = process.env.USE_LOCAL_MONGODB === 'true';
 const mongoUri = process.env.MONGODB_URI || (useLocalMongo ? localMongoUri : null);
 const isRender = process.env.RENDER === 'true';
